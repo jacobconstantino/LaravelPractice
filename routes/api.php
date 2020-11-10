@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post('/todolist','App\Http\Controllers\apicontroller@activitytodolist');
+Route::get('/getdata','App\Http\Controllers\apicontroller@getactivity');
+Route::get('/specificdata/{id}','App\Http\Controllers\apicontroller@specificdata');

@@ -14,12 +14,12 @@ class Userdetails2 extends Migration
     public function up()
     {
         Schema::create('userdetails2', function (Blueprint $table) {
-            $table->id('user_id2');
-            $table->unsignedBigInteger('login_id2');
+            $table->id('userdetails_id2');
+            $table->unsignedBigInteger('login_id2')->nullable();
             $table->foreign('login_id2')->references('login_id2')->on('login2');
             $table->string('name');
             $table->string('email');
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

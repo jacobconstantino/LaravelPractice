@@ -17,7 +17,7 @@ class Login2 extends Migration
             $table->id('login_id2');
             $table->string('username');
             $table->string('password');
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -28,6 +28,8 @@ class Login2 extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('login2');
+        Schema::table('login2', function (Blueprint $table) {
+            //
+        });
     }
 }

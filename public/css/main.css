@@ -8,3 +8,7 @@
 .main input{
         margin-top: 20px;
  }   
+
+.main label{
+	margin-top: 2px;
+}

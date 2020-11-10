@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/user','App\Http\Controllers\todolist@user');
+Route::post('/createuser','App\Http\Controllers\todolist@createuser');
+
 Route::get('/','App\Http\Controllers\todolist@index');
 
 Route::get('/activity','App\Http\Controllers\todolist@activityget');

@@ -18,5 +18,12 @@ class login2 extends Model
 
 
     public $timestamps = false;
+
+
+
+    public function userdetails2(){
+
+    	return $this->hasOne('App\Models\userdetails2','login_id2');
+    }
     
 }
